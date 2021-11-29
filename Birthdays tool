@@ -1,0 +1,54 @@
+birthdays = {'Adam Jones':'29/11/1986','David Smith':'01/05/1990','Jane Morgan':'14/04/1979'}
+
+print("##############################################")
+print("###########My Simple Birthday Too#############")
+print("#############By Neil Brooks, 2021#############")
+print("##############################################")
+
+print("Welcome to the Brooks Birthday Tool. This can be used by managers in remembering birthdays or just for family.")
+print("Do you want an overall list of birthdays for this year? Or do you want to check who's birthday it is this month?")
+print("Note: The names contained in this list are placeholders. They can be edited manually for the birthdays of your team/group.")
+print("For the list, type LIST. To check by month, type MONTH")
+while True:
+    do = input(":: ")
+    if do == "LIST":
+        print(birthdays)
+    elif do == "MONTH":
+        print("Enter your current month below in BLOCK CAPITALS: ")
+        while True:
+            do = input(":: ")
+            if do ==  "JANUARY":
+                print("No birthdays this month!")
+            elif do ==  "FEBRUARY":
+                print("No birthdays this month!")
+            elif do ==  "MARCH":
+                print("No birthdays this month!")
+            elif do ==  "APRIL":
+                print("The following person has a birthday this month: ")
+                print("Jane Morgan")
+                print(birthdays['Jane Morgan'])
+            elif do ==  "MAY":
+                print("The following person has a birthday this month: ")
+                print("David Smith")
+                print(birthdays['David Smith'])
+            elif do ==  "JUNE":
+                print("No birthdays this month!")
+            elif do ==  "JULY":
+                print("No birthdays this month!")
+            elif do ==  "AUGUST":
+                print("No birthdays this month!")
+            elif do ==  "SEPTEMBER":
+                print("No birthdays this month!")
+            elif do ==  "OCTOBER":
+                print("No birthdays this month!")
+            elif do ==  "NOVEMBER":
+                print("The following person has a birthday this month: ")
+                print("Adam Jones")
+                print(birthdays['Adam Jones'])
+            elif do ==  "DECEMBER":
+                print("No birthdays this month!")                
+            else:
+                print("Not recognised!")
+    else:
+        ("Not recognised!")
+                
