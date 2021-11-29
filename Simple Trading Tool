@@ -1,1 +1,38 @@
-print("Hello")
+import datetime
+print("##############################################")
+print("#############My Simple Stock Tool#############")
+print("#############By Neil Brooks, 2021#############")
+print("##############################################")
+
+print("Welcome to my simple stock calculator tool.")
+print("This program has two primary functions at this point; calculating the profit of an individual stock transaction and calculating the dividends due to received on a stock.")
+print("The current date is:", datetime.date.today())
+print("The last update was on: 2021-11-15")
+
+import math
+print("If you want to calculate stock profits, in BLOCK CAPITALS write PROFIT")
+print("If you want to calculate due dividends, in BLOCK CAPITALS write DIVIDEND")
+while True:
+    do = input("Type here: ")
+    if do == "PROFIT":
+        print("You have opted to check the profit of an initial transaction. NOTE: Please enter all values without using a currency mark (such as $).")
+        number1 = int(input("First please enter your initial cash investment: "))
+        number2 = int(input("Then enter the share price you bought at: "))
+        result = number1 / number2
+        print("You have purchased the following number of shares: " + str(result))
+        number3 = int(input("What is the current buy price: "))
+        buyprice = number3 * result
+        print("Your current share is valued at: " + str(buyprice))
+        profit1 = buyprice - number1
+        print("If you sell, your profit will be: " + str(profit1))
+    elif do == "DIVIDEND":
+        print("You have opted to check the amount of dividends you will be owed on a particular stock. NOTE: Please enter all values without using a currency mark (such as $).")
+        number1 = int(input("First please enter your initial cash investment: "))
+        number2 = int(input("Then enter the share price you bought at: "))
+        result = number1 / number2
+        print("You have purchased the following number of shares: " + str(result))
+        number3 = float(input("What is the per-share dividend amount for the next month/quarter? "))
+        dividend1 = number3 * result
+        print("You will receive the following dividend: " + str(dividend1))
+    else:
+        print("ERROR - this is not a viable option.")
