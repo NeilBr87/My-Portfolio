@@ -1,0 +1,51 @@
+print("##############################################")
+print("#########My Simple DIY and budget tool########")
+print("#############By Neil Brooks, 2021#############")
+print("##############################################")
+print("First, input the total amount of money you have to play with (do not use currency signs): ")
+intmoney1 = int(input(":: "))
+
+print("Now add up to five items to your list. If you are doing a big project, like the whole house, feel free to express this as rooms. Or create a separate program for invidiual actions.")
+print("Describe item one below:")
+item1 = input(":: ")
+print("Now give an estimated cost(again, do not use currency marks).")
+cost1 = int(input(":: "))
+print("Describe item two below:")
+item2 = input(":: ")
+print("Now give an estimated cost(again, do not use currency marks).")
+cost2 = int(input(":: "))
+print("Describe item three below:")
+item3 = input(":: ")
+print("Now give an estimated cost(again, do not use currency marks).")
+cost3 = int(input(":: "))
+print("Describe item four below:")
+item4 = input(":: ")
+print("Now give an estimated cost(again, do not use currency marks).")
+cost4 = int(input(":: "))
+print("Describe item five below:")
+item5 = input(":: ")
+print("Now give an estimated cost(again, do not use currency marks).")
+cost5 = int(input(":: "))
+
+sumtotal1 = cost1 + cost2 + cost3 + cost4 + cost5
+budgetcalc1 = intmoney1 - sumtotal1
+
+while True:
+    print("Now, if you want to get your total outgoing cost, type TOTAL. If you want a list of your project items, say LIST. To let you know if you're under or over budget, type BUDGET")
+    selection = input(":: ")
+    if selection == "TOTAL":
+        print("Your total is: " + str(sumtotal1))
+    elif selection == "LIST":
+        print("Item one: " + item1)
+        print("Item two: " + item2)
+        print("Item three: " + item3)
+        print("Item four: " + item4)
+        print("Item five: " + item5)
+    elif selection == "BUDGET":
+        print("Here is your budget calculation: ")
+        if budgetcalc1 <0:
+            print("You are " + str(budgetcalc1) + " over budget!")
+        else:
+            print("You are " + str(budgetcalc1) + " under budget!")
+    else:
+        print("Not recognised!")
