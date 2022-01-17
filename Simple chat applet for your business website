@@ -1,0 +1,24 @@
+# Please note: At this point I am only experienced enough to *write* this chat applet for your business website. I can't give you instructions on incorporating it onto the site itself, but will update these as I go along. 
+# This is designed for a simple automated chat function. If the chat cannot help the user with their simple enquiry, it creates a log of the person's needs for a human to interact with.
+
+# I've used a default example here. Edit it to apply to your business. 
+potbusinessengland = ("Alright! Let's get you through to one of our sales consultants for England. Our new business lead is Bob Smith. YOu can reach him at +44 201 111 1111. Alternatively, you can email him at bob.smith@ourcompany.com")
+potbusinessscotland = ("Alright! Let's get you through to one of our sales consultants for Scotland. Our new business lead is Bob Glenn. YOu can reach him at +44 201 222 2222. Alternatively, you can email him at bob.glenn@ourcompany.com")
+potbusinesswales = ("Alright! Let's get you through to one of our sales consultants for Wales. Our new business lead is Bob Jones. YOu can reach him at +44 201 333 3333. Alternatively, you can email him at bob.jones@ourcompany.com")
+potbusinessengland = str(potbusinessengland)
+
+#UNDER CONSTRUCTION#
+
+print("Hello, you're through to John. I'm an automatic chatbot designed to get you through to the right department. How can I help you today?")
+answer1 = input(":: ")
+answer1 = str(answer1)
+
+if "potential" in answer1:
+    print("It sounds like you're thinking of doing business with us. Would that be correct?")
+    answer2 = input(":: ")
+    if "Yes" in answer2:
+        print("Great - now we just need to know where you are in the UK. We operate in England, Scotland, and Wales.")
+        answer3 = input(":: ")
+        if "ngland" in answer3:
+            print(potbusinessengland)
+            
